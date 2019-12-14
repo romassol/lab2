@@ -50,7 +50,7 @@ public:
     {
         if (!isEnabled)
             return;
-
+        
         unsigned long duration = round(BUZZER_NOTE_DURATION*durations[currentNote]);
         if ((millis() - noteStartedMs) > duration)
         {
