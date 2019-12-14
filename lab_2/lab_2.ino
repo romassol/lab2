@@ -2,8 +2,8 @@
 #include "button.h"
 #include "buzzer.h"
 
-#define PIN_BUZZER 6
-#define PIN_BUTTON 5
+#define PIN_BUZZER 45
+#define PIN_BUTTON 44
 
 Button button(PIN_BUTTON);
 Buzzer buzzer(PIN_BUZZER);
@@ -27,6 +27,7 @@ void setup() {
 
 void loop() {
   float dist = readDist();
+  Serial.println(dist);
 //  float dist = distances[i];
 //  i = (i+1) % 12;
   ifSightedObjectSoundOn(dist);
